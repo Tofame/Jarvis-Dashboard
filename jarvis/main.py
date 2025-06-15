@@ -1,6 +1,7 @@
 import customtkinter as ctk
 
 from jarvis.ui.crypto_panel import CryptoPanel
+from jarvis.ui.notes_panel import NotesPanel
 from jarvis.ui.weather_panel import WeatherPanel
 from jarvis.ui.stocks_panel import StocksPanel
 from jarvis.ui.currencies_panel import CurrenciesPanel
@@ -28,30 +29,24 @@ class JarvisApp(ctk.CTk):
         weather_container.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
         weather_container.grid_columnconfigure(0, weight=1)
         weather_container.grid_rowconfigure(0, weight=1)
-        #weather_panel = WeatherPanel(weather_container)
-        #weather_panel.pack(expand=True, anchor="center")
+        # weather_panel = WeatherPanel(weather_container)
+        # weather_panel.pack(expand=True, anchor="center")
 
         # Currencies panel container
         currencies_container = ctk.CTkFrame(left_panel)
         currencies_container.grid(row=1, column=0, sticky="nsew", padx=5, pady=5)
         currencies_container.grid_columnconfigure(0, weight=1)
         currencies_container.grid_rowconfigure(0, weight=1)
-        #currencies_panel = CurrenciesPanel(currencies_container)
-        #currencies_panel.pack(anchor="n", pady=10)
+        # currencies_panel = CurrenciesPanel(currencies_container)
+        # currencies_panel.pack(anchor="n", pady=10)
 
         # ----------- Center panel (notes) container
         center_panel = ctk.CTkFrame(self)
         center_panel.grid(row=0, column=1, sticky="nsew", padx=5, pady=5)
         center_panel.grid_columnconfigure(0, weight=1)
         center_panel.grid_rowconfigure(0, weight=1)
-
-        # TO-DO Notes Panel
-        # notes_container = ctk.CTkFrame(center_panel)
-        # notes_container.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
-        # notes_container.grid_columnconfigure(0, weight=1)
-        # notes_container.grid_rowconfigure(0, weight=1)
-        # notes_panel = NotesPanel(notes_container)
-        # notes_panel.pack(expand=True, anchor="center")
+        notes_panel = NotesPanel(center_panel)
+        notes_panel.grid(row=0, column=0, sticky="nsew")
 
         # ----------- Right panel (stocks + crypto)
         right_panel = ctk.CTkFrame(self)
@@ -65,16 +60,16 @@ class JarvisApp(ctk.CTk):
         stocks_container.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
         stocks_container.grid_columnconfigure(0, weight=1)
         stocks_container.grid_rowconfigure(0, weight=1)
-        #stocks_panel = StocksPanel(stocks_container)
-        #stocks_panel.pack(expand=True, anchor="center")
+        # stocks_panel = StocksPanel(stocks_container)
+        # stocks_panel.pack(expand=True, anchor="center")
 
         # Crypto panel container example (if you add it later)
         crypto_container = ctk.CTkFrame(right_panel)
         crypto_container.grid(row=1, column=0, sticky="nsew", padx=5, pady=5)
         crypto_container.grid_columnconfigure(0, weight=1)
         crypto_container.grid_rowconfigure(0, weight=1)
-        #crypto_panel = CryptoPanel(crypto_container)
-        #crypto_panel.pack(expand=True, anchor="center")
+        # crypto_panel = CryptoPanel(crypto_container)
+        # crypto_panel.pack(expand=True, anchor="center")
 
 
 if __name__ == "__main__":
