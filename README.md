@@ -1,3 +1,5 @@
+![CI](https://github.com/Tofame/Jarvis-Dashboard/actions/workflows/ci.yml/badge.svg)
+
 # JARVIS – Intelligent Dashboard
 
 **JARVIS** is a smart, modular dashboard that aggregates essential real-time information in one convenient place, helping you stay updated effortlessly.
