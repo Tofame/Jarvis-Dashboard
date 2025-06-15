@@ -1,5 +1,6 @@
 import customtkinter as ctk
 
+from jarvis.db import init_db
 from jarvis.ui.crypto_panel import CryptoPanel
 from jarvis.ui.notes_panel import NotesPanel
 from jarvis.ui.weather_panel import WeatherPanel
@@ -74,6 +75,7 @@ class JarvisApp(ctk.CTk):
 
 if __name__ == "__main__":
     load_dotenv()
+    init_db()
     ctk.set_appearance_mode("dark")
     ctk.set_default_color_theme("dark-blue")
     app = JarvisApp()
