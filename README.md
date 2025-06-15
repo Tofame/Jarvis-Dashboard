@@ -57,3 +57,7 @@ FINNHUB_API_KEY=XXXXXXXXXXXX
 ## Testing
 Just run:
 ```python -m unittest discover -s jarvis/tests/unit```
+
+## Preview Image
+
+![Jarvis_Dashboard_Image](https://github.com/user-attachments/assets/3fde64a3-7032-42d1-8aed-2ad34a8e1192)
