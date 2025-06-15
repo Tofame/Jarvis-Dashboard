@@ -1,9 +1,18 @@
+import os
+
 import customtkinter as ctk
 from jarvis.modules.stocks import get_stock_price, get_watched_stocks, save_watched_stocks
 
 class StocksPanel(ctk.CTkFrame):
     def __init__(self, parent):
         super().__init__(parent)
+
+        # Check if no .env, then we skip stocks panel
+        self.api_key = os.getenv("FINNHUB_API_KEY")
+        if not self.api_key:
+            warning_label = ctk.CTkLabel(self, text="⚠️ Stocks API key (FINNHUB_API_KEY) missing in .env.\nPanel disabled.", fg_color="red", text_color="white", font=("Arial", 14))
+            warning_label.pack(padx=10, pady=10)
+            return
 
         self.watched_stocks = get_watched_stocks()
 

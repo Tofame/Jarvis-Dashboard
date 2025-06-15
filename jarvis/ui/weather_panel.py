@@ -11,6 +11,14 @@ from jarvis.modules.weather import get_weather
 class WeatherPanel(ctk.CTkFrame):
     def __init__(self, master):
         super().__init__(master)
+
+        # Check if no .env, then we skip weather panel
+        self.api_key = os.getenv("WEATHER_API_KEY")
+        if not self.api_key:
+            warning_label = ctk.CTkLabel(self, text="⚠️ Weather API key (WEATHER_API_KEY) missing in .env.\nPanel disabled.", fg_color="red", text_color="white", font=("Arial", 14))
+            warning_label.pack(padx=10, pady=10)
+            return
+
         self.city_var = ctk.StringVar(value="Warsaw")
 
         self.label = ctk.CTkLabel(self, text="City:")
