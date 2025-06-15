@@ -110,7 +110,7 @@ class NotesPanel(ctk.CTkFrame):
                     formatting = json.loads(db_note.formatting)
                 except Exception as e:
                     logging.warning(f"Failed to parse formatting for note {db_note.id}: {e}")
-            note = self.add_note(content=db_note.content, is_persistent=db_note.is_persistent)
+            note = self.add_note(content=db_note.content, is_persistent=True)
             note.apply_formatting(formatting)
 
     def _on_mousewheel(self, event):

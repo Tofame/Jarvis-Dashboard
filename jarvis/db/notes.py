@@ -8,9 +8,12 @@ def save_notes(notes, overwrite=False):
             session.query(NoteModel).delete()
 
         for note_dict in notes:
+            # Don't save notes that aren't persistent
+            if not note_dict.get("is_persistent", True):
+                continue
+
             note = NoteModel(
                 content=note_dict["content"],
-                is_persistent=note_dict["is_persistent"],
                 bg_color=note_dict.get("bg_color", "#fef3c7"),
                 formatting=note_dict.get("formatting")
             )
