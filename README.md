@@ -11,17 +11,17 @@ Currently implemented components:
 - 📈 **Stocks:** Track stock market prices and trends.
 - 💱 **Currencies:** View currency exchange rates.
 - ₿ **Cryptocurrency:** Monitor cryptocurrency prices and movements.
-
-### Planned Features
-- 📝 **Notes Panel:** A personal notes section for quick reminders and organization (coming soon).
+- 📝 **Notes Panel:** A personal notes section for quick reminders and organization. Every note can be either persistent (seen on every app launch, or temporary).
 
 ## Technologies
 
 - **Language:** Python  
 - **Testing:** Unit tests
 - **Interface:** GUI with Tkinter
-- **Caching:** Local JSON caching (with plans for database integration)  
-- **Configuration:** Environment variables and `.env` support  
+- **Caching:** Local JSON caching (with plans for database integration)
+- **SQLite DB:** Local database - SQLite, that currently is used for storing notes.
+- **Configuration:** Environment variables and `.env` support
+- **CI/CD with GitHub Actions:** Automatic testing of app functionality 
 
 ## Installation & Usage
 
