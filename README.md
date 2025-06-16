@@ -62,7 +62,7 @@ Just run:
 
 ![Jarvis_Dashboard_Image](https://github.com/user-attachments/assets/3fde64a3-7032-42d1-8aed-2ad34a8e1192)
 
+https://github.com/user-attachments/assets/cd1042c1-16a9-4559-b8e2-750b7227840f
 
-https://github.com/user-attachments/assets/44026514-403d-4264-87bf-44b484a9d7af
 
 
